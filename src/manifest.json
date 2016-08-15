@@ -1,0 +1,27 @@
+{
+  "manifest_version": 2,
+  "author": "Michael Hari",
+  "name": "GlassHunt",
+  "description": "This extension will reskin GlassDoor to look like ProductHunt",
+  "version": "1.0.0",
+  "permissions": ["storage", "tabs"],
+  "icons": {
+    "16": "images/icon16.png",
+    "48": "images/icon48.png",
+    "128": "images/icon128.png"
+  },
+  "browser_action": {
+    "default_icon": {
+      "19": "images/icon19.png",
+      "38": "images/icon38.png"
+    },
+    "default_title": "GlassHunt"
+  },
+  "content_scripts": [
+     {
+       "matches": ["https://*/*", "http://*/*"],
+       "css": ["/styles/style.css"],
+       "js": ["/scripts/app.js"]
+     }
+   ]
+}
